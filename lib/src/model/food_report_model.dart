@@ -1,15 +1,15 @@
-class OrderReport { // Changed class name to OrderReport
+class OrderReport { 
   final User user;
   final List<Report> reports;
 
-  OrderReport({ // Updated constructor
+  OrderReport({ 
     required this.user,
     required this.reports,
   });
 
-  factory OrderReport.fromJson(Map<String, dynamic> json) { // Updated factory method
-    return OrderReport( // Updated class reference
-      user: User.fromJson(json['user']), // Parse the user data
+  factory OrderReport.fromJson(Map<String, dynamic> json) { 
+    return OrderReport( 
+      user: User.fromJson(json['user']), 
       reports: (json['reports'] as List<dynamic>)
           .map((report) => Report.fromJson(report as Map<String, dynamic>))
           .toList(),
@@ -137,7 +137,7 @@ class Report {
       date: _parseDate(json['date']),
       optIns: json['opt_ins'] is Map<String, dynamic>
           ? OptIns.fromJson(json['opt_ins'])
-          : OptIns(), // Empty OptIns if null
+          : OptIns(), 
     );
   }
 

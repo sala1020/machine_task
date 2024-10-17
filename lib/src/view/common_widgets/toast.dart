@@ -5,7 +5,7 @@ class ToastWidget {
   static void showToast(String message, {ToastGravity gravity = ToastGravity.BOTTOM}) {
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_SHORT, // Use a short duration as a fallback
+      toastLength: Toast.LENGTH_SHORT,
       gravity: gravity,
       timeInSecForIosWeb: 1,
       backgroundColor: AppColor.commonBlack,
@@ -15,7 +15,7 @@ class ToastWidget {
 
     // Custom duration
     Future.delayed(const Duration(milliseconds:1100 ), () {
-      Fluttertoast.cancel(); // Cancel the toast after the custom duration
+      Fluttertoast.cancel(); 
     });
   }
 }

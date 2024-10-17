@@ -19,7 +19,7 @@ class InformationTile extends StatelessWidget {
       leading: Icon(icon, color: Colors.teal),
       title: Text(
         value,
-        style: AppTextStyles.valueStyle, // Use a common style for meal status
+        style: AppTextStyles.valueStyle, 
       ),
       tileColor: AppColor.lightGrey,
       shape: RoundedRectangleBorder(

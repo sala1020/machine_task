@@ -24,20 +24,19 @@ class HomeCards extends StatelessWidget {
     String? imagePath;
     void Function()? ontap;
 
-    // Define card content based on index
     if (index == 0) {
       title = 'Profile';
-      imagePath = 'assets/profile.png'; // Replace with your profile image path
+      imagePath = 'assets/profile.png'; 
       ontap = () {
-        Get.to(() => Profile(user: user)); // Pass user data to Profile
+        Get.to(() => Profile(user: user));
       };
     } else if (index == 1) {
       title = 'Orders';
-      imagePath = 'assets/food.png'; // Replace with your food log image path
+      imagePath = 'assets/food.png'; 
       ontap = () {
         Get.to(() => FoodLog(
               reports: report,
-            )); // Pass user data to FoodLog
+            )); 
       };
     }
 

@@ -16,18 +16,18 @@ class HomeErrorMessageHandler extends StatelessWidget {
     return Center(
       child: GestureDetector(
         onTap: () async {
-          await controller.refreshController(); // Try refreshing on tap
+          await controller.refreshController();
         },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               controller.errorMessage.value,
-              style: AppTextStyles.reportDate, // Customize error message color
+              style: AppTextStyles.reportDate, 
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 8), // Spacing for better visibility
-            const Text("Tap to refresh"), // Instruction to tap for refresh
+            const SizedBox(height: 8),
+            const Text("Tap to refresh"),
           ],
         ),
       ),
