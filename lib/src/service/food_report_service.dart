@@ -19,23 +19,21 @@ class FoodReportService {
         },
         body: jsonEncode({"month": 11}),
       );
-
       print(response.statusCode);
-
       if (response.statusCode == 200) {
         final responseBody = jsonDecode(response.body);
         // Optionally check if the response body is as expected
         if (responseBody != null) {
           return OrderReport.fromJson(responseBody);
         } else {
-          throw Exception("Received null response body.");
+          throw Exception("Received Empty Response...");
         }
       } else {
         throw Exception(
             "Error: ${response.statusCode} - ${response.reasonPhrase}");
       }
     } catch (e) {
-      throw Exception("Failed to fetch customer report: $e");
+      throw Exception("Failed to fetch customer report,Try again..");
     }
   }
 }

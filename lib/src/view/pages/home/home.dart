@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_order_app/src/core/app_color.dart';
 import 'package:food_order_app/src/core/app_text_styles.dart';
-import 'package:food_order_app/src/view/widgets/custom_app_bar.dart';
-import 'package:food_order_app/src/view/home/widget/home_card.dart';
-import 'package:food_order_app/src/view/home/widget/home_error_handler.dart';
+import 'package:food_order_app/src/view/common_widgets/custom_app_bar.dart';
+import 'package:food_order_app/src/view/pages/home/widget/home_card.dart';
+import 'package:food_order_app/src/view/pages/home/widget/home_error_handler.dart';
 import 'package:get/get.dart';
 import 'package:food_order_app/src/controller/food_detail_controller.dart';
 import 'package:lottie/lottie.dart';
@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
         color: AppColor.commonBlack,
         backgroundColor: AppColor.primaryBackground,
         onRefresh: () async {
-          await controller.fetchOrder();
+          await controller.refreshController();
         },
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -55,7 +55,7 @@ class Home extends StatelessWidget {
               return Center(
                 child: GestureDetector(
                   onTap: () async {
-                    await controller.fetchOrder();
+                    await controller.refreshController();
                   },
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,

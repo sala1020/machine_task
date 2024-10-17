@@ -1,7 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:food_order_app/src/model/food_report_model.dart';
 import 'package:food_order_app/src/service/food_report_service.dart';
-import 'package:food_order_app/src/view/widgets/toast.dart';
+import 'package:food_order_app/src/view/common_widgets/toast.dart';
 import 'package:get/get.dart';
 
 class FoodDetailController extends GetxController {
@@ -14,6 +14,10 @@ class FoodDetailController extends GetxController {
   void onInit() {
     super.onInit();
     fetchOrder();
+  }
+
+  refreshController() async {
+    await fetchOrder();
   }
 
   Future<void> fetchOrder() async {
@@ -31,13 +35,12 @@ class FoodDetailController extends GetxController {
       final report = await _reportService.reportService();
       customerReport.value = report;
       errorMessage.value = '';
-      ToastWidget.showToast("Fetching Successful.");
+      ToastWidget.showToast("Fetched Successfully...");
     } catch (e) {
-      ToastWidget.showToast("$e");
-      print(e);
+      ToastWidget.showToast("Something went wrong,Try Again..");
     } finally {
       isLoading(false);
-      update();
+      // update();
     }
     update();
   }

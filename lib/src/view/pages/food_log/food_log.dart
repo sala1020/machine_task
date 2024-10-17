@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_order_app/src/core/app_text_styles.dart';
 import 'package:food_order_app/src/model/food_report_model.dart';
-import 'package:food_order_app/src/view/food_log/widgets/report_card.dart';
-import 'package:food_order_app/src/view/food_log/widgets/status_row.dart';
-import 'package:food_order_app/src/view/widgets/custom_app_bar.dart';
-import 'package:intl/intl.dart';
+import 'package:food_order_app/src/view/pages/food_log/widgets/report_card.dart';
+import 'package:food_order_app/src/view/common_widgets/custom_app_bar.dart';
 
 class FoodLog extends StatelessWidget {
   final List<Report> reports;

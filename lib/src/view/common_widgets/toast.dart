@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_order_app/src/core/app_color.dart';
 
@@ -15,7 +14,7 @@ class ToastWidget {
     );
 
     // Custom duration
-    Future.delayed(Duration(milliseconds:1100 ), () {
+    Future.delayed(const Duration(milliseconds:1100 ), () {
       Fluttertoast.cancel(); // Cancel the toast after the custom duration
     });
   }

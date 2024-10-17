@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_order_app/src/core/app_color.dart';
-import 'package:food_order_app/src/view/home/home.dart';
+import 'package:food_order_app/src/view/pages/home/home.dart';
 import 'package:get/get.dart';
 
 void main() {

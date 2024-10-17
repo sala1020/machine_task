@@ -16,7 +16,7 @@ class HomeErrorMessageHandler extends StatelessWidget {
     return Center(
       child: GestureDetector(
         onTap: () async {
-          await controller.fetchOrder(); // Try refreshing on tap
+          await controller.refreshController(); // Try refreshing on tap
         },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

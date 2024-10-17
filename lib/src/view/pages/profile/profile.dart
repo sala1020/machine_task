@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_order_app/src/core/app_color.dart';
 import 'package:food_order_app/src/model/food_report_model.dart';
-import 'package:food_order_app/src/view/profile/widgets/information_tile.dart';
-import 'package:food_order_app/src/view/widgets/custom_app_bar.dart'; 
+import 'package:food_order_app/src/view/pages/profile/widgets/information_tile.dart';
+import 'package:food_order_app/src/view/common_widgets/custom_app_bar.dart'; 
 import 'package:food_order_app/src/core/app_text_styles.dart'; 
 
 class Profile extends StatelessWidget {
